@@ -43,7 +43,10 @@
                 position: relative;
                 top: -11px;
                 right: -5px;
-                font-weight: 600
+                font-weight: 600;
+                &--dollar {
+                    margin-right: 14px;
+                }
             }
             
         }
