@@ -6,7 +6,7 @@ const Page = ({ category, id, separator, back }) => {
   if (_.isEmpty(category) && _.isEmpty(id)) {
     return <div className="breadcrumb"></div>;
   } else if (!_.isEmpty(category) && _.isEmpty(id)) {
-    return <div className="breadcrumb">{category}</div>;
+    return <div className="breadcrumb"><span>{category}</span></div>;
   } else if (!_.isEmpty(id)) {
     id = separator + id;
     return (
