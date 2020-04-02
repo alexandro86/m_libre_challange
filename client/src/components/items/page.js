@@ -1,9 +1,10 @@
 import React from "react";
 import List from "../list/index";
 import "./index.scss";
+import _ from "lodash";
 
 const Page = ({ items }) => {
-  if (items) {
+  if (!_.isEmpty(items)) {
     return (
       <div className="items">
         {items.map(it => (
@@ -18,6 +19,8 @@ const Page = ({ items }) => {
         ))}
       </div>
     );
+  } else if (_.isEmpty(items)) {
+    return<h1>Not Founded!</h1>
   }
   return (
     <div>
