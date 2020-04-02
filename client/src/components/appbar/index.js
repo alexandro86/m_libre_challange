@@ -14,13 +14,11 @@ import Suggestions from "../suggestions/index";
 class AppBar extends Component {
   constructor(props) {
     super(props);
-    this.buildSearch = this.buildSearch.bind(this);
-    this.handleFilter = this.handleFilter.bind(this);
     this.state = {
       suggestion: ""
     };
   }
-  buildSearch(value) {
+  buildSearch = value => {
     const generated = generatePath("/items?:param=:search", {
       search: String(value).replace(" ", ""),
       param: "search"
@@ -33,7 +31,7 @@ class AppBar extends Component {
     this.props.history.push(path);
   }
 
-  handleFilter(value) {
+  handleFilter  = value => {
     this.setState({ suggestion: value });
   }
 

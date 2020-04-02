@@ -6,9 +6,8 @@ import { connect } from "react-redux";
 class List extends Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
   }
-  handleClick() {
+  handleClick = () => {
     this.props.fetchThunkProduct(`/items/${this.props.id}`);
     this.props.history.push(`/items/${this.props.id}`);
   }

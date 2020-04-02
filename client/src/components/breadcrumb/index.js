@@ -10,9 +10,8 @@ class BreadCrumb extends Component {
       crumbs: [],
       separator: " > "
     };
-    this.handleBack = this.handleBack.bind(this);
   }
-  handleBack() {
+  handleBack = () => {
     this.props.history.goBack();
   }
   render() {
