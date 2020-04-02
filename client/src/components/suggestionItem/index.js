@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { loadContent } from "../../redux/actions/suggestions";
 import "./index.scss";
-
+/**
+ * Each suggestion at bar
+ */
 class SuggestionItem extends Component {
+  /**
+   * When click on it
+   */
   handleClick = () => {
     this.props.loadContent(this.props.content);
   };

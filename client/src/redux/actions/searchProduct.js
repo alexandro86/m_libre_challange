@@ -1,3 +1,4 @@
+// actions related to search product
 import {
   FETCH_PRODUCT_FAILURE,
   FETCH_PRODUCT_SUCCESS,

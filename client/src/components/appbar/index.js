@@ -18,6 +18,10 @@ class AppBar extends Component {
       suggestion: ""
     };
   }
+  /**
+   * Build the search url
+   * @param value string with plane fragment
+   */
   buildSearch = value => {
     const generated = generatePath("/items?:param=:search", {
       search: String(value).replace(" ", ""),
@@ -27,15 +31,26 @@ class AppBar extends Component {
     this.navigateTo(generated);
     this.props.addSuggestions(value);
   }
+
+  /**
+   * Navigate to given path
+   * @param {string} path to navigate
+   */
   navigateTo(path) {
     this.props.history.push(path);
   }
 
+  /**
+   * Change the suggestion to filtering the search
+   */
   handleFilter  = value => {
     this.setState({ suggestion: value });
   }
 
-  handleRemove = value => {
+  /**
+   * Control of the change of input search
+   */
+  handleChage = value => {
     this.props.changeSugestions(value);
     this.setState({ suggestion: value });
   };
@@ -46,7 +61,7 @@ class AppBar extends Component {
           handleSearch={this.buildSearch}
           filter={this.handleFilter}
           update={this.props.suggestion.option}
-          remove={this.handleRemove}
+          remove={this.handleChage}
           suggestion={this.state.suggestion}
         />
         <Suggestions suggestion={this.state.suggestion} />

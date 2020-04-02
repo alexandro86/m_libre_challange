@@ -4,7 +4,7 @@ import Page from "./page";
 import _ from "lodash";
 import "./index.scss";
 /**
- * suggestion bellow bar
+ * suggestions at bar
  */
 class Suggestions extends Component {
   render() {

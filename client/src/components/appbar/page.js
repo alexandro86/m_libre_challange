@@ -6,12 +6,14 @@ const Page = ({ handleSearch, filter, update, remove, suggestion }) => {
   const value = update;
   const searchRef = React.createRef();
 
+  // send for index the given event
   const handleClick = e => {
     e.preventDefault();
     const { current } = searchRef;
     handleSearch(current.value);
   };
 
+  // send for index the given filter or change
   const handleFilter = e => {
     e.preventDefault();
     const { current } = searchRef;

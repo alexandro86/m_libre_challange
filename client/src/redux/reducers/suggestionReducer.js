@@ -1,3 +1,4 @@
+// reducer related to suggestions 
 import {
   ADD_SUGGESTIONS,
   SHOW_SUGGESTIONS,

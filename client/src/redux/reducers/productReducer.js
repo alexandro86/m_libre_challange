@@ -1,3 +1,4 @@
+// reducer related to search product
 import {
   FETCH_PRODUCT_REQUEST,
   FETCH_PRODUCT_SUCCESS,

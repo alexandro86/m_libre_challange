@@ -1,3 +1,4 @@
+// actions related to get suggestions
 import {
   ADD_SUGGESTIONS,
   SHOW_SUGGESTIONS,

@@ -11,6 +11,9 @@ class BreadCrumb extends Component {
       separator: " > "
     };
   }
+  /**
+   * When page go back
+   */
   handleBack = () => {
     this.props.history.goBack();
   }

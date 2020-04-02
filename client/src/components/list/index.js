@@ -3,6 +3,9 @@ import Page from "./page";
 import { withRouter } from "react-router-dom";
 import { fetchThunkProduct } from "../../redux/actions/searchProduct";
 import { connect } from "react-redux";
+/**
+ * List of products
+ */
 class List extends Component {
   constructor(props) {
     super(props);

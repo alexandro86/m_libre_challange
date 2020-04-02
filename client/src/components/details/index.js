@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import Page from "./page";
 import { connect } from "react-redux";
 import _ from "lodash";
+/**
+ * Detail of product
+ */
 class Details extends Component {
   render() {
     if (this.props.product.response.loading) {
