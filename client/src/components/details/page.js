@@ -1,36 +1,33 @@
 import React from "react";
 import "./index.scss";
-
+import _ from "lodash"
 const Page = ({
-  picture,
-  condition,
-  title,
-  price,
-  description,
-  sold,
-  decimals
+  item
 }) => {
+  if(_.isEmpty(item)) {
+    return<h1>Loading...</h1>
+  }
   return (
     <div className="card-detail">
       <div className="card-detail--container">
         <div className="card-detail--picture">
-          <img alt="product" src={picture} width="100%" height="100%"></img>
+          <img alt="product" src={item.picture} width="100%" height="100%"></img>
         </div>
         <div className="card-detail--info">
           <div className="card-detail--info--condition">
-            <span>{condition}</span>-
+            <span>{item.condition}</span>-
             <span className="card-detail--info--condition--sold">
-              {sold} unidades vendidas
+              {item.sold} unidades vendidas
             </span>
           </div>
           <div className="card-detail--info--title">
-            <span>{title}</span>
+            <span>{item.title}</span>
           </div>
           <div className="card-detail--info--price">
             <span>$</span>
-            <span>{price}</span>
+            <span>{item.price.amount}</span>
             <span className="card-detail--info--price--decimals">
-              {decimals}
+              {item.price.decimals}
             </span>
           </div>
           <button className="card-detail--button">Comprar</button>
@@ -38,7 +35,7 @@ const Page = ({
       </div>
       <div className="card-detail--description">
         <h2>Descripción del producto</h2>
-        <p>{description}</p>
+        <p>{item.description}</p>
       </div>
     </div>
   );

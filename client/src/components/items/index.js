@@ -7,7 +7,7 @@ import { withRouter } from "react-router";
  */
 class Items extends Component {
   render() {
-    return <Page items={this.props.reducer.response.items} />;
+    return <Page items={this.props.reducer.response.items} loading={this.props.reducer.response.loading} />;
   }
 }
 

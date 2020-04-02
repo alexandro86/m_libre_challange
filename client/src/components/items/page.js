@@ -3,8 +3,10 @@ import List from "../list/index";
 import "./index.scss";
 import _ from "lodash";
 
-const Page = ({ items }) => {
-  if (!_.isEmpty(items)) {
+const Page = ({ items, loading }) => {
+  if (_.isNull(items)) {
+    return <h1>404 Not founded!</h1>
+  } else if (!_.isEmpty(items)) {
     return (
       <div className="items">
         {items.map(it => (
@@ -19,9 +21,7 @@ const Page = ({ items }) => {
         ))}
       </div>
     );
-  } else if (_.isEmpty(items)) {
-    return<h1>Not Founded!</h1>
-  }
+  } 
   return (
     <div>
       <h1>Loading...</h1>

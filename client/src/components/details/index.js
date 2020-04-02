@@ -13,22 +13,23 @@ class Details extends Component {
     return (
       <div>
         <Page
-          description={_.get(
-            this.props.product,
-            "response.item.description",
-            ""
-          )}
-          title={_.get(this.props.product, "response.item.title", "")}
-          picture={_.get(this.props.product, "response.item.picture", "")}
-          condition={_.get(this.props.product, "response.item.condition", "")}
-          price={_.get(this.props.product, "response.item.price.amount", "")}
-          decimals={_.get(
-            this.props.product,
-            "response.item.price.decimals",
-            ""
-          )}
-          loading={_.get(this.props.product, "response.loading", "")}
-          sold={_.get(this.props.product, "response.item.sold_quantity", "")}
+          // description={_.get(
+          //   this.props.product,
+          //   "response.item.description",
+          //   ""
+          // )}
+          // title={_.get(this.props.product, "response.item.title", "")}
+          // picture={_.get(this.props.product, "response.item.picture", "")}
+          // condition={_.get(this.props.product, "response.item.condition", "")}
+          // price={_.get(this.props.product, "response.item.price.amount", "")}
+          // decimals={_.get(
+          //   this.props.product,
+          //   "response.item.price.decimals",
+          //   ""
+          // )}
+          // loading={_.get(this.props.product, "response.loading", "")}
+          // sold={_.get(this.props.product, "response.item.sold_quantity", "")}
+          item={_.get(this.props.product, "response.item", {})}
         />
       </div>
     );

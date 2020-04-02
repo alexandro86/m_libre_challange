@@ -3,6 +3,7 @@ const { GetCategories, author } = require("./common");
 
 const base = "https://api.mercadolibre.com/sites/MLA/search?q=";
 const sort = "&sort=sortId&limit=4";
+const _ = require("lodash")
 
 /**
  * Return a result of query all items over api
@@ -56,7 +57,10 @@ function GetResult(data) {
   result.categories = GetCategories(data);
 
   const { results } = data;
-  // got items
+  if (_.isEmpty(results)) {
+    result.items = null
+  } else {
+    // got items
   for (const item of results) {
     const {
       id,
@@ -81,6 +85,8 @@ function GetResult(data) {
     };
     result.items.push(element);
   }
+  }
+  
   result = { author, ...result };
   return result;
 }
