@@ -24,7 +24,7 @@ const Page = ({
             <span>{item.title}</span>
           </div>
           <div className="card-detail--info--price">
-            <span>$</span>
+            <span className="card-detail--info--price--dollar">$</span>
             <span>{item.price.amount}</span>
             <span className="card-detail--info--price--decimals">
               {String(item.price.decimals).substring(0,2)}
