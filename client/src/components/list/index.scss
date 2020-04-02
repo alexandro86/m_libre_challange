@@ -1,0 +1,42 @@
+.card {
+    background-color: white;
+    border-bottom: solid #EBEBEB 1px;
+    padding: 20px 12px 45px 12px;
+    cursor: pointer;
+    
+    &--picture {
+        width: 12%;
+        height: 100%;
+    }
+
+    &--info {
+        width: 66%;
+        height: 100%;
+        &--price {
+            font-size: xx-large;
+            &--currency {
+                margin-right: 8px;
+            }
+        }
+        &--title {
+            font-size: large;
+        }
+    }
+
+    &--remark {
+        width: 20%;
+        height: 100%;
+        font-size: small;
+        padding-top: 40px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+
+}
+

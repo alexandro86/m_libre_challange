@@ -1,0 +1,55 @@
+.card-detail{
+    background-color: white;
+    border: solid #ebebeb 1px;
+    border-radius: 2px;
+    margin: 60px 150px 60px 150px;
+    padding: 30px 60px 30px 20px;
+    &--container {
+        display: flex;
+        flex-direction: row;
+    }
+    &--picture {
+        width: 68%;
+        height: auto;
+        margin-right: 18px;
+    }
+    &--button  {
+        color: white;
+        background-color: #3483FA;
+        border-radius: 4px;
+        border: solid #3483FA 1px;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    &--info {
+        width: 30%;
+        &--condition {
+            font-size: small;
+            margin-bottom: 20px;
+            &--sold {
+                margin-left: 14px;
+            }
+        }
+        &--title {
+            font-size: x-large;
+            margin-bottom: 45px;
+        }
+        &--price {
+            font-size: xx-large;
+            margin-bottom: 12px;
+            &--decimals {
+                font-size: medium;
+                position: relative;
+                top: -11px;
+                right: -5px;
+                font-weight: 600
+            }
+            
+        }
+    }
+
+    &--description{
+        margin-top: 20px;
+    }
+}

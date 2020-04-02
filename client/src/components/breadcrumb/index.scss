@@ -1,0 +1,10 @@
+.breadcrumb {
+    margin: 18px 12px 6px 6px;
+    cursor: pointer;
+    span {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+}
